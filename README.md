@@ -9,15 +9,6 @@ IP Addressing Strategy: A structured Class B private IPv4 addressing scheme was 
 
 WAN Link: The point-to-point inter-router connection between Router2 and Router3 was implemented using a dedicated /30 subnet (10.10.10.0/30) over a Serial DCE connection to minimize IP waste and establish a secure WAN link.
 
-Summary of Technical Challenges & Solutions
-Throughout the configuration process, several hardware and logical challenges were resolved:
-
-HWIC-2T Hardware Module Installation: Default Cisco 2901 routers lacked built-in serial ports; this was resolved by retrofitting HWIC-2T expansion cards into the router slots.
-
-Subnet Conflict Resolution: Resolved initial IP address overlap errors on router interfaces by systematically flushing stale port configs and reassigning IPv4 gateways sequentially.
-
-WAN Link Activation: Addressed red-status interface link errors by matching precise physical serial interface numbers (e.g., Serial0/2/0) and enabling Port Status: ON across both routers simultaneously.
-
 End-Device Configuration: Standardized static IP configurations and default gateways across all host PCs to ensure seamless local segment routing.
 
 Current Status & Next Steps
